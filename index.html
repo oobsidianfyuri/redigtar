@@ -5,71 +5,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>REDIGTAR - Record Digital Taruna</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom right, #1a1a1a, #333);
+      background: linear-gradient(to right, #1e1e2f, #2c2c3e);
       color: #fff;
+      font-family: Arial, sans-serif;
     }
 
     nav {
-      background-color: #000;
+      background-color: #111;
     }
 
-    nav .nav-link {
+    nav a {
       color: #fff;
-      font-weight: 600;
-      margin: 0 10px;
-      border: 2px solid #ffc107;
-      border-radius: 20px;
-      padding: 6px 12px;
-      transition: all 0.3s ease-in-out;
-    }
-
-    nav .nav-link:hover {
-      background-color: #ffc107;
-      color: #000;
+      margin-right: 20px;
     }
 
     header {
-      background: linear-gradient(to right, #111, #222);
       text-align: center;
-      padding: 80px 20px;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #222, #333);
     }
 
     header h1 {
-      font-size: 3rem;
-      font-weight: 700;
       color: #ffc107;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin: 20px 0;
-    }
-
-    .btn-primary {
-      background-color: #ffc107;
-      border: none;
-      color: #000;
       font-weight: bold;
-      border-radius: 8px;
-      padding: 10px 20px;
     }
 
     section {
-      padding: 60px 20px;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      color: #ffc107;
+      margin-bottom: 20px;
     }
 
     footer {
       background-color: #111;
-      padding: 30px;
       text-align: center;
+      padding: 20px;
       color: #aaa;
+    }
+
+    .form-control,
+    .btn {
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -77,14 +59,14 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark px-10">
     <a class="navbar-brand" href="#">
-      <img src="logo1.png" alt="Logo REDIGTAR" width="100">
+      <img src="logo1.png" alt="REDIGTAR Logo" width="150" height="100" />
     </a>
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
         <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
         <li class="nav-item"><a class="nav-link" href="#daftar">Pendaftaran</a></li>
-        <li class="nav-item"><a class="nav-link" href="#sosmed">Sosial Media</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sosial">Sosial Media</a></li>
       </ul>
     </div>
   </nav>
@@ -92,31 +74,48 @@
   <header>
     <h1>REDIGTAR</h1>
     <p>Record Digital Taruna – Ekskul dokumentasi kegiatan ketarunaan SMK Negeri 1 Purung.</p>
-    <a href="#daftar" class="btn btn-primary">Daftar Sekarang</a>
+    <a href="#daftar" class="btn btn-warning">Daftar Sekarang</a>
   </header>
 
   <section id="tentang">
-    <div class="container">
-      <h2 class="text-warning">Tentang Kami</h2>
-      <p>REDIGTAR adalah ekstrakurikuler yang bertugas mendokumentasikan berbagai kegiatan di SMK Negeri 1 Purung yang berbasis ketarunaan. Terdiri dari berbagai divisi seperti Editor, Fotografer, Videografer, Desainer Visual, dan Pilot Drone, kami bekerja secara profesional untuk menghasilkan dokumentasi berkualitas tinggi.</p>
-    </div>
+    <h2>Tentang Kami</h2>
+    <p>
+      REDIGTAR adalah ekstrakurikuler yang bertugas mendokumentasikan berbagai kegiatan di SMK Negeri 1 Purung
+      yang berbasis ketarunaan. Terdiri dari berbagai divisi seperti Editor, Fotografer, Videografer,
+      Desainer Visual, dan Pilot Drone, kami bekerja secara profesional untuk menghasilkan dokumentasi terbaik.
+    </p>
   </section>
 
   <section id="galeri">
-    <div class="container">
-      <h2 class="text-warning">Galeri Kegiatan</h2>
-      <div class="galeri-placeholder">(Slider galeri akan ditambahkan di sini)</div>
+    <h2>Galeri Kegiatan</h2>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://via.placeholder.com/800x400?text=Kegiatan+1" class="d-block w-100" alt="Kegiatan 1" />
+        </div>
+        <div class="carousel-item">
+          <img src="https://via.placeholder.com/800x400?text=Kegiatan+2" class="d-block w-100" alt="Kegiatan 2" />
+        </div>
+        <div class="carousel-item">
+          <img src="https://via.placeholder.com/800x400?text=Kegiatan+3" class="d-block w-100" alt="Kegiatan 3" />
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
     </div>
   </section>
 
   <section id="daftar">
-    <div class="container">
-      <h2 class="text-warning">Pendaftaran Anggota Baru</h2>
-      <form action="https://script.google.com/macros/s/AKfycbyUEkhAT7tQciMgZg1f9HY23lCACIexxCChTKAkfZdBK8vXalDFlvwj45A7mr4eG6A2/exec" method="POST">
-        <input type="text" name="nama" placeholder="Nama Lengkap" required class="form-control my-2">
-        <input type="text" name="kelas" placeholder="Kelas" required class="form-control my-2">
-        <select name="divisi" required class="form-control my-2">
-          <option value="">-- Pilih Divisi --</option>
+    <h2>Pendaftaran Anggota Baru</h2>
+    <form action="https://script.google.com/macros/s/AKfycbyUEkhAT7tQciMgZg1f9HY23lCACIexxCChTKAkfZdBK8vXalDFlvwj45A7mr4eG6A2/exec" method="POST">
+      <input type="text" name="nama" placeholder="Nama Lengkap" class="form-control" required />
+      <input type="text" name="kelas" placeholder="Kelas" class="form-control" required />
+      <select name="divisi" class="form-control" required>
+       <option value="">-- Pilih Divisi --</option>
           <option value="Editor">Editor</option>
           <option value="Fotografer">Fotografer</option>
           <option value="Videografer">Videografer</option>
@@ -124,23 +123,26 @@
           <option value="Pilot Drone">Pilot Drone</option>
           <option value="Konten Kreator">Konten Kreator</option>
           <option value="Jurnalistik">Jurnalistik</option>
-        </select>
-        <textarea name="alasan" placeholder="Alasan Bergabung" required class="form-control my-2"></textarea>
-        <button type="submit" class="btn btn-primary">Kirim</button>
-      </form>
-    </div>
+      </select>
+      <textarea name="alasan" class="form-control" placeholder="Alasan Bergabung" required></textarea>
+      <button type="submit" class="btn btn-warning">Kirim</button>
+    </form>
   </section>
 
-  <section id="sosmed">
-    <div class="container">
-      <h2 class="text-warning">Sosial Media</h2>
-      <p>(Tautan sosial media akan ditampilkan di sini)</p>
-    </div>
+  <section id="sosial">
+    <h2>Sosial Media</h2>
+    <p>Ikuti kami di media sosial untuk update terbaru kegiatan:</p>
+    <ul>
+      <li><a href="#" class="text-warning">Instagram: @redigtar.smk1purung</a></li>
+      <li><a href="#" class="text-warning">YouTube: REDIGTAR OFFICIAL</a></li>
+    </ul>
   </section>
 
   <footer>
-    <p>&copy; 2025 REDIGTAR. All rights reserved.</p>
+    <p>&copy; 2025 REDIGTAR | SMK Negeri 1 Purung</p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
