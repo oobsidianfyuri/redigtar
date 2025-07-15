@@ -12,6 +12,11 @@
       font-family: 'Poppins', sans-serif;
       background-color: #1e1e1e;
       color: #f1f1f1;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.light-mode {
+      background-color: #ffffff;
+      color: #1e1e1e;
     }
     header {
       background-color: #2f2f2f;
@@ -67,12 +72,34 @@
       text-align: center;
       font-style: italic;
     }
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    form button {
+      background-color: #ffcc00;
+      color: #000;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+    }
     footer {
       background-color: #111;
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
       color: #aaa;
+    }
+    .toggle-theme {
+      cursor: pointer;
+      font-size: 0.9rem;
+      color: #ffcc00;
     }
   </style>
 </head>
@@ -84,6 +111,7 @@
       <a href="#galeri">Galeri</a>
       <a href="#daftar">Pendaftaran</a>
       <a href="#sosmed">Sosial Media</a>
+      <span class="toggle-theme" onclick="toggleTheme()">🌙/☀️</span>
     </nav>
   </header>
 
@@ -100,13 +128,25 @@
 
   <section id="galeri">
     <h2>Galeri Kegiatan</h2>
-    <div class="galeri-placeholder">(Galeri kegiatan akan diisi setelah kegiatan berlangsung)</div>
+    <div class="galeri-placeholder">(Galeri slider akan ditambahkan di sini)</div>
   </section>
 
   <section id="daftar">
     <h2>Pendaftaran Anggota Baru</h2>
-    <p>Silakan isi formulir berikut untuk bergabung dengan REDIGTAR:</p>
-    <div class="galeri-placeholder">(Formulir pendaftaran akan ditautkan di sini - misalnya Google Form)</div>
+    <form action="https://formsubmit.co/youremail@domain.com" method="POST">
+      <input type="text" name="nama" placeholder="Nama Lengkap" required />
+      <input type="text" name="kelas" placeholder="Kelas" required />
+      <select name="divisi" required>
+        <option value="">-- Pilih Divisi --</option>
+        <option value="Editor">Editor</option>
+        <option value="Fotografer">Fotografer</option>
+        <option value="Videografer">Videografer</option>
+        <option value="Desainer Visual">Desainer Visual</option>
+        <option value="Pilot Drone">Pilot Drone</option>
+      </select>
+      <textarea name="alasan" placeholder="Alasan Bergabung" required></textarea>
+      <button type="submit">Kirim</button>
+    </form>
   </section>
 
   <section id="sosmed">
@@ -117,5 +157,11 @@
   <footer>
     &copy; 2025 REDIGTAR - SMK Negeri 1 Purung
   </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+    }
+  </script>
 </body>
 </html>
